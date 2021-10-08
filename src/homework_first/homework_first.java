@@ -6,11 +6,13 @@ public class homework_first {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number for radius:");
-        double radius = input.nextDouble();
-        double area = radius * radius *3.14159;
-        System.out.println("The area for the circle of radius " + radius + " is " + area);
+       Scanner input = new Scanner(System.in);
+       System.out.print("Enter three numbers: ");
+       double number1 = input.nextDouble();
+       double number2 = input.nextDouble();
+       double number3 = input.nextDouble();
+       double average = (number1 + number2 + number3) / 3;
+       System.out.println("The average of " + number1 + " " + number2 + " " + number3 + " " + " is " + average);
 	}
 
 }
