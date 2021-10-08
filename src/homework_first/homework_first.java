@@ -4,8 +4,11 @@ public class homework_first {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        System.out.print("Celsius 35 is Fahrenheit degree");
-        System.out.println((9 / 5) * 35 + 32);
+        double radius;
+        double area;
+        radius=20;
+        area=radius*radius*3.14159;
+        System.out.println("The area for the circle of radius " + radius + " is " + area);
 	}
 
 }
