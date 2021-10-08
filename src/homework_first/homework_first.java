@@ -7,22 +7,31 @@ public class homework_first {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter annual interest rate, e.g., 7.25: ");
-		double annualInterestRate = input.nextDouble();
 		
-		double monthlyInterestRate = annualInterestRate / 1200;
+		System.out.print("Enter an amount in double, for example 11.56: ");
 		
-		System.out.print("Enter number of years as an integer, e.g., 5:");
-		int numberOfYears = input.nextInt();
+		double amount = input.nextDouble();
 		
-		System.out.print("Enter loan amount, e.g., 120000.95:");
-		double loanAmount = input.nextDouble();
+		int remainingAmount = (int)(amount * 100);
+		int numberOfOneDollars = remainingAmount / 100;
+		remainingAmount = remainingAmount % 100;
+		int numberOfQuaters = remainingAmount / 25;
+		remainingAmount = remainingAmount % 25;
 		
-		double monthlyPayment = loanAmount * monthlyInterestRate / (1 - 1/Math.pow(1 + monthlyInterestRate,numberOfYears * 12));
-		double totalPayment = monthlyPayment * numberOfYears * 12;
+		int numberOfDimes = remainingAmount / 10;
+		remainingAmount = remainingAmount % 10;
 		
-		System.out.println("The monthly payment is $" + (int)(monthlyPayment * 100) / 100.0);
-		System.out.println("The total payment is $" + (int)(totalPayment * 100) / 100.0);
+		int numberOfNickels = remainingAmount / 5;
+		remainingAmount = remainingAmount % 5;
+		
+		int numberOfPennies = remainingAmount;
+		
+		System.out.println("your amount " + amount + " consists of");
+		System.out.println(" " + numberOfOneDollars + " dollars");
+		System.out.println(" " + numberOfQuaters + " quarters ");
+		System.out.println(" " + numberOfDimes + " dimes");
+		System.out.println(" " + numberOfNickels + " nickels");
+		System.out.println(" " + numberOfPennies + " pennies");
 	}
 
 }
