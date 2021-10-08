@@ -6,11 +6,14 @@ public class homework_first {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner input = new Scanner(System.in);
-		System.out.print("Enter a degree in Fahrenheit: ");
-		double fahrenheit = input.nextDouble();
-		double celsius = (5.0/9) * (fahrenheit - 32);
-		System.out.println("Fahrenheit " + fahrenheit + " is " + celsius + " in Celsius");
+		long totalMilliseconds = System.currentTimeMillis();
+		long totalSeconds = totalMilliseconds / 1000;
+		long currentSecond = totalSeconds % 60;
+		long totalMinutes = totalSeconds / 60;
+		long currentMinute = totalMinutes % 60;
+		long totalHours = totalMinutes / 60;
+		long currentHour = totalHours % 24;
+		System.out.println("Current time is " + currentHour + ":" + currentMinute + ":" + currentSecond + " GMT ");
 	      
        
 	}
